@@ -12,6 +12,21 @@
  * @param obj - 一個物件
  * @returns - 回傳一個物件，該物件有 get 和 set 兩個方法
  */
+
 export function createObjectAccessor<T>(obj: T) {
     // 請在此處寫下你的程式碼
+    function set(key: keyof T, value: T[keyof T]): void {
+        obj[key] = value;
+    }
+
+    function get(key: keyof T): T[keyof T] | undefined {
+        return obj[key];
+    }
+
+
+    return{
+        set,
+        get
+    }
+
 }

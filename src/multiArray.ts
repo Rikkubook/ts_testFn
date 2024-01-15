@@ -8,6 +8,9 @@
  * 輸出: [[2, 4], [6, 8], [10, 12]]
  */
 
-export function processMultiArray(arr) {
+export function processMultiArray(arr:number[][]):number[][]{
+    const newArray = arr.map((innerArray)=>
+        innerArray.map((item)=> item*2))
+    return newArray
     // 在此實現函式
 }

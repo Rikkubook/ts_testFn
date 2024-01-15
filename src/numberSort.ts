@@ -9,5 +9,6 @@
  */
 
 export function sortNumbers(numbers: number[]): number[] {
+  return numbers.sort()
   // 在此實現函式
 }

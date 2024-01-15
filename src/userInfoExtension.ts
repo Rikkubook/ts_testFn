@@ -22,6 +22,9 @@ interface AddressInfo {
 // 請在此處寫下你的程式碼
 
 
+interface FullUserInfo extends BasicUserInfo, AddressInfo {
+    // 不新增方法，僅擴充成員
+}
 /**
  * 任務：實作一個函式 `createFullUserInfo`，將使用者的基本資訊和地址資訊合併成一個物件。
  *
@@ -34,4 +37,5 @@ interface AddressInfo {
  */
 export function createFullUserInfo(user: FullUserInfo): FullUserInfo {
     // 請在此處寫下你的程式碼
+    return user
 }

@@ -9,6 +9,11 @@
  */
 export function formatDate(date: Date): string {
     // 請在此處寫下你的程式碼
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // 月份是從 0 開始，需要加 1
+    const day = String(date.getDate()).padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
 }
 
 /**
@@ -21,5 +26,6 @@ export function formatDate(date: Date): string {
  * @returns - 回傳一個數字，表示四捨五入後的結果
  */
 export function roundNumber(num: number): number {
+    return Math.round(num);
     // 請在此處寫下你的程式碼
 }
